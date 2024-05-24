@@ -1,6 +1,6 @@
 class IceCream {
   public rating = "5/5 yummy!";
-  constructor(public id: number, public name: string) {}
+  constructor(public id: number, public name: string) { }
 }
 
 class IceCreamDatabase {
@@ -10,6 +10,8 @@ class IceCreamDatabase {
     new IceCream(9, "Strawberry Choc"),
   ];
 
+  static getByIdOrName(type: 'id', idOrName: number): any
+  static getByIdOrName(type: 'name', idOrName: string): any
   static getByIdOrName(type: "id" | "name", idOrName: number | string) {
     if (type === "id") {
       return IceCreamDatabase.db.find((ic) => ic.id === idOrName);
@@ -24,4 +26,4 @@ IceCreamDatabase.getByIdOrName("name", 9); // ❌
 IceCreamDatabase.getByIdOrName("id", 34); // ✅
 IceCreamDatabase.getByIdOrName("name", "Blueberry"); // ✅
 
-export {};
+export { };

@@ -1,4 +1,4 @@
-function inputTypeIsOutputType(input: string | number) {
+function inputTypeIsOutputType<T>(input: T): T {
   return input;
 }
 
@@ -8,4 +8,4 @@ const calculation = shouldBeANumber + 1;
 const shouldBeAString = inputTypeIsOutputType("test");
 const strLength = shouldBeAString.length;
 
-export {};
+export { };
