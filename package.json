@@ -15,6 +15,9 @@
   "license": "UNLICENSED",
   "homepage": "TODO",
   "devDependencies": {
-    "typescript": "^5.0.2"
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "g": "^2.0.1"
   }
 }

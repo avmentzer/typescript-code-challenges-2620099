@@ -8,9 +8,12 @@ const personExtension = {
   hobbies: ["Klettern"],
 };
 
-type WantedType = {
-  name: string;
-  hobbies?: string[];
-};
+type WantedType = Pick<typeof personDefinition, 'name'>
+  & Partial<Pick<typeof personExtension, 'hobbies'>>;
 
-export {};
+const myNewObject: WantedType = {
+  name: "Alexander",
+  
+}
+
+export { };
